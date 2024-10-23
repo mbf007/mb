@@ -1,0 +1,14 @@
+[package]
+name = "moonbeam"
+version = "0.1.0"
+edition = "2021"
+authors = ["Your Name <your.email@example.com>"]
+
+# Explicitly opt-out of default features
+default-features = false
+
+[dependencies]
+# Only include absolutely necessary dependencies
+log = { version = "0.4", default-features = true }
+env_logger = { version = "0.10", default-features = true }
+
