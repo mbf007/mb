@@ -1,4 +1,4 @@
-use log::{debug, error, info, trace, warn};
+use log::info;
 
 fn main() {
     // Initialize the logger
