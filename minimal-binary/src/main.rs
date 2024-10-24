@@ -1,5 +1,8 @@
 use log::info;
 
+
+// read the git commit version at compile time
+
 fn main() {
     // Initialize the logger
     env_logger::init();
@@ -10,4 +13,8 @@ fn main() {
 
     // Print a standard output message
     println!("Goodbye");
+	let h = env!("VERGEN_GIT_SHA");
+	println!("{}", h);
+
+
 }

@@ -3,6 +3,7 @@ name = "moonbeam"
 version = "0.1.0"
 edition = "2021"
 authors = ["Your Name <your.email@example.com>"]
+build = "build.rs"
 
 # Explicitly opt-out of default features
 default-features = false
@@ -14,3 +15,6 @@ env_logger = { version = "0.10", default-features = true }
 
 [features]
 metadata-hash = []
+
+[build-dependencies]
+vergen-git2 = { version = "1.0.0", features = ["build", "cargo", "rustc", "si"] }
