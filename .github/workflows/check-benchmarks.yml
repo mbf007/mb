@@ -2,10 +2,11 @@ name: Check benchmarks
 
 on:
   workflow_dispatch:
-  pull_request:
-    types: [locked]
-  pull_request_review_comment:
-    types: [deleted, created, edited]
+    on:
+  schedule:
+    - cron: "0 5 * * 0" # Runs every Sunday at 5:00 AM UTC
+    - cron: "0 5 * * 3" # Runs every Wednesday at 5:00 AM UTC
+
 jobs:
   set-tags:
     runs-on: ubuntu-latest
