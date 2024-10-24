@@ -1,4 +1,5 @@
 [workspace]
+# wut
 exclude = ["bin/utils/moonkey"]
 members = [
     "minimal-binary"
